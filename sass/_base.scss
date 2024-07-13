@@ -13,7 +13,18 @@
     --color-gray-dark-3: #999;
 
     --shadow-dark:  0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.07);
+
+    --line: 1px solid var(--color-gray-light-2);
+
 }
+
+$bp-largest: 75em;          // 1200px
+$bp-large: 68.75em;         // 1100px
+$bp-medium: 56.25em;        // 900px
+$bp-small: 37.5em;          // 600px
+$bp-smallest: 31.25em;      // 500px
+$bp-tiny: 31.25em;          // 350px
 
 * {
     margin: 0;
@@ -29,6 +40,15 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px
+    overflow-x: hidden;
+
+    @media only screen and(max-width: $bp-large) {
+        font-size: 50%;
+    }
+
+    @media only screen and(max-width: 350px) {
+        font-size: 40%;
+    }
 }
 
 body {
